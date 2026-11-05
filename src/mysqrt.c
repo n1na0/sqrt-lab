@@ -3,7 +3,7 @@
 
 double my_sqrt(double a, double eps)
 {
-    /* --- Безопасная версия: проверка корректности eps --- */
+    //проверка корректности eps
     if (isnan(eps) || eps <= 0.0) return NAN;
 
     /* --- Обработка особых случаев аргумента --- */
@@ -13,8 +13,8 @@ double my_sqrt(double a, double eps)
     if (isinf(a)) return a;      /* +inf → +inf (для -inf отсечено выше) */
 
     /* --- Основной итерационный процесс --- */
-    double x_prev = a;                               /* x_0 = a */
-    double x_cur  = 0.5 * (x_prev + a / x_prev);     /* x_1 */
+    double x_prev = a;                               // x_0 = a 
+    double x_cur  = 0.5 * (x_prev + a / x_prev);     // x_1 
 
     while (fabs((x_cur - x_prev) / x_cur) >= eps) {
         x_prev = x_cur;
