@@ -17,6 +17,6 @@
  *
  * Реализация: "безопасная" — при eps <= 0 возвращает NaN.
  */
-double my_sqrt(double a, double eps);
+double my_sqrt(double a, double eps); //прототип функции 
 
 #endif /* MYSQRT_H_INCLUDED */
